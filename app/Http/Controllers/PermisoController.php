@@ -4,16 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class InicioController extends Controller
+class PermisoController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($nombre, $slug = false)
     {
-        return view('inicio');
+        return view('permiso', compact('nombre', 'slug'));
     }
 
     /**
@@ -23,7 +23,7 @@ class InicioController extends Controller
      */
     public function create()
     {
-        //
+        return 'Sistema crear';
     }
 
     /**
