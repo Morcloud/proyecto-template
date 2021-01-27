@@ -23,7 +23,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr></tr>
+                            @foreach ($Permisos as $permiso)
+                            <tr>
+                                <td>{{ $permiso->id }}</td>
+                                <td>{{ $permiso->nombre }}</td>
+                                <td>{{ $permiso->slug }}</td>
+                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

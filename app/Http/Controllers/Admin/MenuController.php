@@ -4,9 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Admin\Permiso;
 
-class PermisoController extends Controller
+class MenuController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,7 @@ class PermisoController extends Controller
      */
     public function index()
     {
-        $permisos = Permiso::orderBy('id')->get();
-        return view('admin.permiso.index', compact('permisos'));
+        //
     }
 
     /**
@@ -26,7 +24,7 @@ class PermisoController extends Controller
      */
     public function crear()
     {
-        return view("admin.permiso.crear");
+        return view("admin.menu.crear");
     }
 
     /**

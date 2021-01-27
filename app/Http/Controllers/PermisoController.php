@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Admin\Permiso;
 use Illuminate\Http\Request;
 
 class PermisoController extends Controller
@@ -13,7 +14,8 @@ class PermisoController extends Controller
      */
     public function index($nombre, $slug = false)
     {
-        return view('permiso', compact('nombre', 'slug'));
+        $permisos = Permiso::orderBy('id')->get();
+        return view('admin.permiso.index', compact('permisos'));
     }
 
     /**
@@ -21,9 +23,9 @@ class PermisoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function crear()
     {
-        return 'Sistema crear';
+        return view("admin.permiso.crear");
     }
 
     /**
