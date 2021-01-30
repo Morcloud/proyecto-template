@@ -12,9 +12,14 @@
                 <div class="box-header with-border">
                     <h3 class="box-title">Permisos</h3>
                 </div>
-                <div class="box-body">
-                    Aquí el formulario
-                </div>
+                <form action="" class="form-horizontal">
+                    <div class="box-body">
+                        Aquí el formulario
+                    </div>
+                    <div class="box-footer">
+                        
+                    </div>
+                </form>
             </div>
         </div>
     </div>
